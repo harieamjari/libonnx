@@ -28,7 +28,6 @@
 #include <onnx.h>
 #include <default/default.h>
 
-#define ONNX_LOG(...)	printf(__VA_ARGS__)
 
 static void hmap_entry_callback(struct hmap_t * m, struct hmap_entry_t * e)
 {

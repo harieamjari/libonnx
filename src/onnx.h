@@ -5,8 +5,14 @@
 extern "C" {
 #endif
 
+#include <stdio.h>
 #include <onnxconf.h>
 #include <onnx.proto3.pb-c.h>
+#include <ansicolors.h>
+
+#define ONNX_LOG(...)	fprintf(stderr, __VA_ARGS__)
+#define ONNX_WARNING(...)	ONNX_LOG(COLSTR("warning: ", BHYEL) __VA_ARGS__)
+#define ONNX_ERROR(...)	ONNX_LOG(COLSTR("error: ", BHRED) __VA_ARGS__)
 
 #define LIBONNX_MAJOY			(1)
 #define LIBONNX_MINIOR			(0)
